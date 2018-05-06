@@ -17,10 +17,12 @@ export function getPostsForCategory (category) {
 }
 
 export function getPosts() {
+    var result = null;
     fetch(`${Constants.url}/posts`, { headers: Constants.headers}, {method: Constants.methods.GET})
     .then((res) => res.json())
     .then((data) => {
         console.log('fetch getPosts complete');
+        console.log(data);
     });
 }
 
